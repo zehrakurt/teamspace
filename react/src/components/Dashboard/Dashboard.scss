@@ -1,0 +1,181 @@
+$primary: #2DCC70;
+$body-bg: #233342;
+$card-bg: #2B3A4F;
+$text-primary: #ffffff;
+$text-secondary: #92A1A2;
+$border-color: #34495E;
+$night-blue: #34495E;
+$night-blue-dark: #233342;
+
+.dashboard {
+  padding: 2rem;
+  background-color: $body-bg;
+  min-height: calc(100vh - 80px);
+  color: $text-primary;
+
+  h1 {
+    margin-bottom: 2rem;
+    color: $primary;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(45, 204, 112, 0.3);
+    letter-spacing: 1px;
+  }
+
+  .stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .stat-card {
+    background: $card-bg;
+    border: 2px solid $border-color;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: $primary;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(45, 204, 112, 0.2);
+      border-color: $primary;
+    }
+  }
+
+  .stat-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: $text-secondary;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  .stat-value {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: $primary;
+    text-shadow: 0 0 8px rgba(45, 204, 112, 0.3);
+  }
+
+  .admin-dashboard {
+    background: $card-bg;
+    border: 2px solid $border-color;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    margin-top: 1.5rem;
+  }
+
+  .admin-dashboard h2 {
+    color: $primary;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .admin-dashboard p {
+    color: $text-secondary;
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .user-dashboard {
+    h2 {
+      color: $primary;
+      margin: 2rem 0 1rem 0;
+      font-weight: 600;
+    }
+
+    .projects-summary, .tasks-summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .project-summary-card, .task-summary-card {
+      background: $card-bg;
+      border: 2px solid $border-color;
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+
+      &:hover {
+        border-color: $primary;
+        transform: translateY(-2px);
+      }
+
+      h4 {
+        margin: 0 0 0.5rem 0;
+        color: $text-primary;
+      }
+
+      p {
+        color: $text-secondary;
+        margin: 0 0 0.5rem 0;
+        font-size: 0.9rem;
+      }
+
+      .project-tasks {
+        color: $text-secondary;
+        font-size: 0.8rem;
+      }
+
+      .task-status {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &.status-todo {
+          background: #ffeaa7;
+          color: #d63031;
+        }
+
+        &.status-in_progress {
+          background: #74b9ff;
+          color: white;
+        }
+
+        &.status-done {
+          background: #00b894;
+          color: white;
+        }
+
+        &.status-blocked {
+          background: #fd79a8;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.dashboard-message {
+  padding: 2rem;
+  text-align: center;
+  color: $text-primary;
+  
+  &.error {
+    color: #e74c3c;
+  }
+}
