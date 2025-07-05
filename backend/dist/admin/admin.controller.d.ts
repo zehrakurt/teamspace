@@ -27,56 +27,56 @@ export declare class AdminController {
         };
     }>;
     getAllUsers(): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }[]>;
     updateUserRole(id: string, updateUserRoleDto: UpdateUserRoleDto): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }>;
     approveUser(id: string): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }>;
     disableUser(id: string): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }>;
 }
 export {};

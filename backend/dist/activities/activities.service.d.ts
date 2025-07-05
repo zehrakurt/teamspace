@@ -9,112 +9,112 @@ export declare class ActivitiesService {
         taskId?: number;
     }): Promise<{
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     }>;
     getUserActivities(userId: number): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
     getProjectActivities(projectId: number): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
     getTaskActivities(taskId: number): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
     getRecentActivities(limit?: number): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
 }

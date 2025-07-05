@@ -8,48 +8,48 @@ export declare class CommentsService {
     constructor(prisma: PrismaService, activitiesService: ActivitiesService);
     create(taskId: string, authorId: string, createCommentDto: CreateCommentDto): Promise<{
         author: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     }>;
     findByTaskId(taskId: string): Promise<({
         author: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     })[]>;
     update(authorId: string, id: string, updateCommentDto: UpdateCommentDto): Promise<{
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     }>;
     remove(authorId: string, id: string): Promise<{
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     }>;
 }

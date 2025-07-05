@@ -6,96 +6,96 @@ export declare class MessagesController {
     constructor(messagesService: MessagesService);
     createMessage(req: Request, createMessageDto: CreateMessageDto): Promise<{
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     }>;
     getUserMessages(req: Request): Promise<({
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     })[]>;
     getConversation(req: Request, userId: string): Promise<({
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     })[]>;
     markMessageAsRead(req: Request, messageId: string): Promise<{
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     }>;
     getUnreadMessageCount(req: Request): Promise<{
         count: number;
     }>;
     getAllUsers(): Promise<{
-        id: number;
         email: string;
         firstName: string;
         lastName: string;
+        id: number;
         role: import(".prisma/client").$Enums.Role;
     }[]>;
 }

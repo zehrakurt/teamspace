@@ -24,55 +24,55 @@ export declare class AdminService {
         };
     }>;
     getAllUsers(): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }[]>;
     updateUserRole(userId: number, role: Role): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }>;
     approveUser(userId: number): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }>;
     disableUser(userId: number): Promise<{
+        email: string;
+        firstName: string;
+        lastName: string;
+        id: number;
+        role: import(".prisma/client").$Enums.Role;
+        createdAt: Date;
+        updatedAt: Date;
         _count: {
             projects: number;
             ownedProjects: number;
         };
-        id: number;
-        createdAt: Date;
-        updatedAt: Date;
-        email: string;
-        firstName: string;
-        lastName: string;
-        role: import(".prisma/client").$Enums.Role;
     }>;
 }

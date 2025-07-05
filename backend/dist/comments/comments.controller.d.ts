@@ -7,48 +7,48 @@ export declare class CommentsController {
     constructor(commentsService: CommentsService);
     create(req: Request, taskId: string, createCommentDto: CreateCommentDto): Promise<{
         author: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     }>;
     findByTaskId(taskId: string): Promise<({
         author: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     })[]>;
     update(req: Request, id: string, updateCommentDto: UpdateCommentDto): Promise<{
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     }>;
     remove(req: Request, id: string): Promise<{
         id: number;
-        content: string;
         createdAt: Date;
         updatedAt: Date;
         taskId: number;
+        content: string;
         authorId: number;
     }>;
 }

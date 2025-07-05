@@ -4,90 +4,90 @@ export declare class ActivitiesController {
     constructor(activitiesService: ActivitiesService);
     getUserActivities(req: any): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
     getProjectActivities(id: string): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
     getTaskActivities(id: string): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
     getRecentActivities(): Promise<({
         user: {
-            id: number;
             firstName: string;
             lastName: string;
+            id: number;
         };
         project: {
             id: number;
             name: string;
         };
         task: {
-            id: number;
             title: string;
+            id: number;
         };
     } & {
         id: number;
-        description: string;
         createdAt: Date;
-        userId: number;
+        description: string;
         projectId: number | null;
+        userId: number;
         taskId: number | null;
     })[]>;
 }

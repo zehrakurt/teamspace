@@ -4,13 +4,13 @@ export declare class NotificationsController {
     private readonly notificationsService;
     constructor(notificationsService: NotificationsService);
     getUserNotifications(req: Request): Promise<{
-        id: number;
-        type: import(".prisma/client").$Enums.NotificationType;
-        title: string;
         message: string;
-        status: import(".prisma/client").$Enums.NotificationStatus;
-        data: import("@prisma/client/runtime/library").JsonValue | null;
+        title: string;
+        id: number;
         createdAt: Date;
+        data: import("@prisma/client/runtime/library").JsonValue | null;
+        status: import(".prisma/client").$Enums.NotificationStatus;
+        type: import(".prisma/client").$Enums.NotificationType;
         userId: number;
     }[]>;
     getUnreadCount(req: Request): Promise<{

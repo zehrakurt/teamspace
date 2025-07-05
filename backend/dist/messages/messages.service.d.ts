@@ -5,96 +5,96 @@ export declare class MessagesService {
     constructor(prisma: PrismaService);
     createMessage(senderId: number, createMessageDto: CreateMessageDto): Promise<{
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     }>;
     getUserMessages(userId: number): Promise<({
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     })[]>;
     getConversation(userId: number, otherUserId: number): Promise<({
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     })[]>;
     markMessageAsRead(messageId: number, userId: number): Promise<{
         sender: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
         receiver: {
-            id: number;
             email: string;
             firstName: string;
             lastName: string;
+            id: number;
         };
     } & {
         id: number;
-        content: string;
         createdAt: Date;
+        content: string;
+        receiverId: number;
         isRead: boolean;
         senderId: number;
-        receiverId: number;
     }>;
     getUnreadMessageCount(userId: number): Promise<{
         count: number;
     }>;
     getAllUsers(): Promise<{
-        id: number;
         email: string;
         firstName: string;
         lastName: string;
+        id: number;
         role: import(".prisma/client").$Enums.Role;
     }[]>;
 }
